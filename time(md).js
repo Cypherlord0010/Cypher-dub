@@ -5,7 +5,7 @@ bot(
 		pattern: 'time ?(.*)',
 		fromMe: true,
 		desc: 'find time by timeZone or name or shortcode',
-		type: 'misc',
+		type: 'search',
 	},
 	async (message, match) => {
 		if (!match)
