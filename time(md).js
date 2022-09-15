@@ -13,7 +13,7 @@ bot(
 				'```Give me country name or code\nEx .time US\n.time United Arab Emirates\n.time America/new_york```'
 			)
 		const { status, result } = await getJson(
-			`https://levanter.up.railway.app/time?code=${match}`
+			`https://levanter-qr.vercel.app/time?code=${encodeURIComponent(match)}`
 		)
 		if (!status) return await message.send(`*Not found*`)
 		let msg = ''
